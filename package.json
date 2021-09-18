@@ -1,0 +1,27 @@
+{
+  "name": "types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dist": "tsc",
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/centroespacial/types.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "William Novak <williamnvk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/centroespacial/types/issues"
+  },
+  "homepage": "https://github.com/centroespacial/types#readme",
+  "dependencies": {
+    "mongodb": "^4.1.2",
+    "typescript": "^4.4.3"
+  }
+}
