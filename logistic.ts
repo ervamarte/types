@@ -4,3 +4,16 @@ export interface Volume {
   length: number
   weight: number
 }
+
+export interface ShipmentFreight {
+  id: number
+  name: string
+  price: number
+  days: number
+  company: {
+    name: string
+    image: string
+  }
+}
+
+export type ShipmentFreightArray = ShipmentFreight[]

@@ -3,7 +3,7 @@ import { Coupon } from './coupon'
 import { ID, Slug } from './generic'
 import { User } from './user'
 
-export type OrderStatusEnum = 'waiting_payment' | 'paid' | 'canceled' | 'reversed'
+export type OrderStatusEnum = 'waiting_payment' | 'paid' | 'canceled' | 'reversed' | 'sent' | 'delivered'
 
 export interface Order {
   id: ID
