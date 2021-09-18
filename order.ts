@@ -1,4 +1,4 @@
-import { Cart } from './cart'
+import { Cart, CartItem } from './cart'
 import { Coupon } from './coupon'
 import { ID, Slug } from './generic'
 import { User } from './user'
@@ -13,7 +13,6 @@ export interface Order {
   slug: Slug
   customer: User
   coupon?: Coupon
-  cart: Cart
   subTotal: number
   discount: number
   addition: number
@@ -31,4 +30,7 @@ export interface OrderStatus {
   order: Order
   status: OrderStatusEnum
   createdAt: Date
+}
+export interface OrderItem extends Omit<CartItem, "cart"> {
+  order: Order
 }
