@@ -2,6 +2,7 @@ import { Cart } from './cart'
 import { Coupon } from './coupon'
 import { ID, Slug } from './generic'
 import { User } from './user'
+import { ShipmentFreight } from './logistic'
 
 export type OrderStatusEnum = 'waiting_payment' | 'paid' | 'canceled' | 'reversed' | 'sent' | 'delivered'
 
@@ -17,6 +18,7 @@ export interface Order {
   addition: number
   total: number
   status: OrderStatus['status']
+  shipment: ShipmentFreight
 }
 
 export interface OrderStatus {
