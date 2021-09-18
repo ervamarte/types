@@ -20,3 +20,13 @@ export interface CartItem {
   price: number
   total: number
 }
+export interface CartSummary {
+  discount: number
+  subTotal: number
+  total: number
+}
+export interface CartState extends Omit<Cart, "customer"> {
+  customer: User['id']
+  items: CartItem[]
+  summary: CartSummary
+}
