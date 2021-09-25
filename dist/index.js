@@ -21,3 +21,5 @@ __exportStar(require("./logistic"), exports);
 __exportStar(require("./newsletter"), exports);
 __exportStar(require("./product"), exports);
 __exportStar(require("./seller"), exports);
+__exportStar(require("./order"), exports);
+__exportStar(require("./credit-card"), exports);
