@@ -49,9 +49,7 @@ export interface Product extends ProductPrice {
   seller: Seller
   brand?: Brand
   categories: string[]
-  stock: {
-    entry: number
-  }
+  stock: number
 }
 
 export type ProductList = Pick<
