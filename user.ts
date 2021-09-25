@@ -15,4 +15,7 @@ export interface User {
   document?: string
   birthday?: Date
   lastLogIn?: Date
+  meta: {
+    pagarme: string
+  }
 }
