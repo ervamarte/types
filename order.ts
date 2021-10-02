@@ -12,6 +12,7 @@ export interface Order {
   createdAt: Date
   updatedAt: Date
   slug: Slug
+  cookie: string
   customer?: User
   coupon?: Coupon
   subTotal: number
