@@ -19,6 +19,7 @@ export interface Order {
   addition: number
   total: number
   status: OrderStatus['status']
+  zipCode?: string
   shipment?: ShipmentFreight
   address?: {
     shipping: Omit<Address, "id" | "user" | "active">
