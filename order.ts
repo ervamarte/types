@@ -1,25 +1,26 @@
-import { Cart, CartItem } from './cart'
 import { Coupon } from './coupon'
 import { ID, Slug } from './generic'
 import { User } from './user'
 import { ShipmentFreight } from './logistic'
 import { Address } from './address'
+import { Product } from './product'
 
-export type OrderStatusEnum = 'waiting_payment' | 'paid' | 'canceled' | 'reversed' | 'sent' | 'delivered'
+export type OrderStatusEnum = 'cart' | 'waiting_payment' | 'paid' | 'canceled' | 'reversed' | 'sent' | 'delivered'
 
 export interface Order {
   id: ID
   createdAt: Date
+  updatedAt: Date
   slug: Slug
-  customer: User
+  customer?: User
   coupon?: Coupon
   subTotal: number
   discount: number
   addition: number
   total: number
   status: OrderStatus['status']
-  shipment: ShipmentFreight
-  address: {
+  shipment?: ShipmentFreight
+  address?: {
     shipping: Omit<Address, "id" | "user" | "active">
     billing: Omit<Address, "id" | "user" | "active">
   }
@@ -31,6 +32,21 @@ export interface OrderStatus {
   status: OrderStatusEnum
   createdAt: Date
 }
-export interface OrderItem extends Omit<CartItem, "cart"> {
+export interface OrderItem {
+  id: ID
   order: Order
+  product: Product
+  quantity: number
+  price: number
+  total: number
+}
+export interface OrderSummary {
+  discount: number
+  subTotal: number
+  total: number
+}
+export interface OrderState extends Omit<Order, "customer"> {
+  customer: User['id']
+  items: OrderItem[]
+  summary: OrderSummary
 }

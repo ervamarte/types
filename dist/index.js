@@ -13,7 +13,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./address"), exports);
 __exportStar(require("./brand"), exports);
 __exportStar(require("./campaign"), exports);
-__exportStar(require("./cart"), exports);
 __exportStar(require("./category"), exports);
 __exportStar(require("./coupon"), exports);
 __exportStar(require("./generic"), exports);
