@@ -4,6 +4,7 @@ import { User } from './user'
 import { ShipmentFreight } from './logistic'
 import { Address } from './address'
 import { Product } from './product'
+import { PaymentMethodCreditCard, PaymentMethodPix, PaymentMethodTicket } from 'payment'
 
 export type OrderStatusEnum = 'cart' | 'waiting_payment' | 'paid' | 'canceled' | 'reversed' | 'sent' | 'delivered'
 
@@ -22,6 +23,7 @@ export interface Order {
   status: OrderStatus['status']
   zipCode?: string
   shipment?: ShipmentFreight
+  payment?: PaymentMethodTicket | PaymentMethodCreditCard | PaymentMethodPix
   address?: {
     shipping: Omit<Address, "id" | "user" | "active">
     billing: Omit<Address, "id" | "user" | "active">
