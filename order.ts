@@ -26,6 +26,9 @@ export interface Order {
     shipping: Omit<Address, "id" | "user" | "active">
     billing: Omit<Address, "id" | "user" | "active">
   }
+  meta?: {
+    pagarme: string
+  }
 }
 
 export interface OrderStatus {
@@ -47,8 +50,7 @@ export interface OrderSummary {
   subTotal: number
   total: number
 }
-export interface OrderState extends Omit<Order, "customer"> {
+export interface OrderState extends Omit<Order, "customer">, OrderSummary {
   customer: User['id']
   items: OrderItem[]
-  summary: OrderSummary
 }
