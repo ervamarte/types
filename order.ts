@@ -4,7 +4,7 @@ import { User } from './user'
 import { ShipmentFreight } from './logistic'
 import { Address } from './address'
 import { Product } from './product'
-import { PaymentMethodCreditCard, PaymentMethodPix, PaymentMethodTicket } from 'payment'
+import { PaymentMethodCreditCard, PaymentMethodPix, PaymentMethodTicket } from './payment'
 
 export type OrderStatusEnum = 'cart' | 'waiting_payment' | 'paid' | 'canceled' | 'reversed' | 'sent' | 'delivered'
 
