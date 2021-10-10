@@ -13,5 +13,6 @@ export interface Address {
   phone: string
   zipCode: string
   active: boolean
+  main: boolean
   user: User
 }

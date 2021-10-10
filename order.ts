@@ -5,6 +5,7 @@ import { ShipmentFreight } from './logistic'
 import { Address } from './address'
 import { Product } from './product'
 import { PaymentMethodCreditCard, PaymentMethodPix, PaymentMethodTicket } from './payment'
+import { ShipmentFreightArray } from './logistic'
 
 export type OrderStatusEnum = 'cart' | 'waiting_payment' | 'paid' | 'canceled' | 'reversed' | 'sent' | 'delivered'
 
@@ -31,6 +32,7 @@ export interface Order {
   meta?: {
     pagarme: string
   }
+  freightOptions?: ShipmentFreightArray
 }
 
 export interface OrderStatus {
