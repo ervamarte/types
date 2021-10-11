@@ -25,6 +25,7 @@ export interface Order {
   zipCode?: string
   shipment?: ShipmentFreight
   payment?: PaymentMethodTicket | PaymentMethodCreditCard | PaymentMethodPix
+  userAddress: ID
   address?: {
     shipping: Omit<Address, "id" | "user" | "active">
     billing: Omit<Address, "id" | "user" | "active">
