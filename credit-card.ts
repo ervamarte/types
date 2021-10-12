@@ -4,6 +4,7 @@ import { User } from './user'
 
 export interface CreditCard {
   id: ID
+  holderName: string
   bin: string
   brand: string
   active: boolean
