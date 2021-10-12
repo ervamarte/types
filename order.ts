@@ -55,7 +55,26 @@ export interface OrderSummary {
   subTotal: number
   total: number
 }
+
+export type Installment = {
+  installments: number
+  value: string
+}
+
+export type OrderStatePayment = {
+  pix: {
+    total: number
+  },
+  ticket: {
+    total: number
+  },
+  creditCard: {
+    total: number
+    installments: Installment[]
+  }
+}
 export interface OrderState extends Omit<Order, "customer">, OrderSummary {
   customer: User['id']
   items: OrderItem[]
+  payments: OrderStatePayment
 }
