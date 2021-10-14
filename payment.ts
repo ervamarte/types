@@ -24,7 +24,7 @@ export interface PaymentCreateCustomerPayload {
 export type PaymentCardBrand = 'Elo' | 'Mastercard' | 'Visa' | 'Amex' | 'JCB' | 'Aura' | 'Hipercard' | 'Diners' | 'Discover'
 
 export type PaymentMethodCreditCard = 'credit_card'
-export type PaymentMethodTicket = 'boleto'
+export type PaymentMethodTicket = 'ticket'
 export type PaymentMethodPix = 'pix'
 
 export type PaymentOperationType = 'auth_and_capture' | 'auth_only' | 'pre_auth'
