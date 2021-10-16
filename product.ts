@@ -9,6 +9,8 @@ export type ProductVolume = Volume
 
 export type ProductSEO = SEO
 
+export type ProductType = 'main' | 'variant'
+
 export interface ProductBrand {
   slug: Slug
   name: string
@@ -35,6 +37,7 @@ export interface Product extends ProductPrice {
   sku: string
   name: string
   slug: Slug
+  type: ProductType
   short_description: string
   description: string
   details: ProductDetail[]
@@ -50,7 +53,11 @@ export interface Product extends ProductPrice {
   brand?: Brand
   categories: string[]
   stock: number
+  variants?: ProductVariant[]
+  
 }
+
+export type ProductVariant = Pick<Product, 'id' | 'name' | 'sku' | 'type' | 'active' | 'image' | 'image' | 'volume'>
 
 export type ProductList = Pick<
   Product,
