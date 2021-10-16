@@ -54,7 +54,7 @@ export interface Product extends ProductPrice {
   categories: string[]
   stock: number
   variants?: ProductVariant[]
-  
+  profile?: ProductProfile
 }
 
 export type ProductVariant = Pick<Product, 'id' | 'name' | 'sku' | 'type' | 'active' | 'image' | 'image' | 'volume'>
@@ -64,3 +64,15 @@ export type ProductList = Pick<
   'id' | 'sku' | 'name' | 'slug' | 'price' | 'image'
 >
 export type ProductArray = ProductList[]
+
+export interface ProductProfile {
+  bitterness: number
+  origin: string
+  gender: 'Ilex paraguariensis' | 'Ilex brasiliensis' | 'Ilex vomitoria' | 'Ilex guayusa'
+  temp: string
+  color: string
+  milling: 'grossa' | 'fina' | 'média'
+  consumptionSuggestion: 'quente' | 'fria'
+  organic: boolean
+  sugar: boolean
+}
