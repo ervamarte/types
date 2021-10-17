@@ -61,7 +61,7 @@ export type ProductVariant = Pick<Product, 'id' | 'name' | 'sku' | 'type' | 'act
 
 export type ProductList = Pick<
   Product,
-  'id' | 'sku' | 'name' | 'slug' | 'price' | 'image'
+  'id' | 'sku' | 'name' | 'slug' | 'price' | 'image' | 'stock'
 >
 export type ProductArray = ProductList[]
 
