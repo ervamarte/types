@@ -1,6 +1,9 @@
 import { ID } from './generic'
 
-export type UserRoles = 'admin' | 'user'
+export const USER_ROLE_ADMIN = 'admin'
+export const USER_ROLE_USER = 'user'
+
+export type UserRoles = typeof USER_ROLE_ADMIN | typeof USER_ROLE_USER
 
 export interface User {
   id: ID

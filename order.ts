@@ -7,7 +7,21 @@ import { Product } from './product'
 import { PaymentMethodCreditCard, PaymentMethodPix, PaymentMethodTicket } from './payment'
 import { ShipmentFreightArray } from './logistic'
 
-export type OrderStatusEnum = 'cart' | 'waiting_payment' | 'paid' | 'canceled' | 'reversed' | 'sent' | 'delivered'
+export const ORDER_STATUS_CART = 'cart'
+export const ORDER_STATUS_WAITING_PAYMENT = 'waiting_payment'
+export const ORDER_STATUS_PAID = 'paid'
+export const ORDER_STATUS_CANCELED = 'canceled'
+export const ORDER_STATUS_REVERSED = 'reversed'
+export const ORDER_STATUS_SENT = 'sent'
+export const ORDER_STATUS_DELIVERED = 'delivered'
+
+export type OrderStatusEnum = typeof ORDER_STATUS_CART 
+  | typeof ORDER_STATUS_WAITING_PAYMENT 
+  | typeof ORDER_STATUS_PAID 
+  | typeof ORDER_STATUS_CANCELED
+  | typeof ORDER_STATUS_REVERSED 
+  | typeof ORDER_STATUS_SENT 
+  | typeof ORDER_STATUS_DELIVERED
 
 export interface Order {
   id: ID

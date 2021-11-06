@@ -5,6 +5,9 @@ import { ID, Slug } from './generic'
 import { Seller } from './seller'
 import { Brand } from './brand'
 
+export const PRODUCT_TYPE_MAIN = 'main'
+export const PRODUCT_TYPE_VARIANT = 'variant'
+
 export type ProductVolume = Volume
 
 export type ProductSEO = SEO
@@ -13,9 +16,10 @@ export type ProductTax = {
   gtin: string
   ncm: string
   cest: string
+  origin: number
 }
 
-export type ProductType = 'main' | 'variant'
+export type ProductType = typeof PRODUCT_TYPE_MAIN | typeof PRODUCT_TYPE_VARIANT
 
 export interface ProductBrand {
   slug: Slug

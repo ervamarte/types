@@ -1,6 +1,10 @@
 import { User } from "./user";
 import { Order } from "./order";
 
+export const PAYMENT_METHOD_TICKET = 'ticket'
+export const PAYMENT_METHOD_PIX = 'pix'
+export const PAYMENT_METHOD_CREDIT_CARD = 'credit_card'
+
 export interface Payment {
   createdAt: Date
   updateAt: Date
@@ -23,9 +27,9 @@ export interface PaymentCreateCustomerPayload {
 
 export type PaymentCardBrand = 'Elo' | 'Mastercard' | 'Visa' | 'Amex' | 'JCB' | 'Aura' | 'Hipercard' | 'Diners' | 'Discover'
 
-export type PaymentMethodCreditCard = 'credit_card'
-export type PaymentMethodTicket = 'ticket'
-export type PaymentMethodPix = 'pix'
+export type PaymentMethodCreditCard = typeof PAYMENT_METHOD_CREDIT_CARD
+export type PaymentMethodTicket = typeof PAYMENT_METHOD_TICKET
+export type PaymentMethodPix = typeof PAYMENT_METHOD_PIX
 
 export type PaymentOperationType = 'auth_and_capture' | 'auth_only' | 'pre_auth'
 
