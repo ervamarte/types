@@ -1,2 +1,0 @@
-export const STOCK_TYPE_LENDING = 'LENDING';
-export const STOCK_TYPE_ACQUISITION = 'ACQUISITION';

@@ -2,7 +2,7 @@
   "name": "types",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "dist": "tsc",
     "test": "exit 0"
