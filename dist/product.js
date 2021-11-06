@@ -1,2 +1,2 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+export const PRODUCT_TYPE_MAIN = 'main';
+export const PRODUCT_TYPE_VARIANT = 'variant';

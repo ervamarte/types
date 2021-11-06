@@ -1,2 +1,2 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+export const STOCK_TYPE_LENDING = 'LENDING';
+export const STOCK_TYPE_ACQUISITION = 'ACQUISITION';

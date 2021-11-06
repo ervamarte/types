@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
+    "module": "ESNext",
     "outDir": "./dist",
     "resolveJsonModule": true,
     "strict": true,
@@ -9,6 +9,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "allowJs": true,
+    "moduleResolution": "Node",
     "baseUrl": ".",
     "skipLibCheck": true,
     
