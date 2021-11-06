@@ -9,6 +9,12 @@ export type ProductVolume = Volume
 
 export type ProductSEO = SEO
 
+export type ProductTax = {
+  gtin: string
+  ncm: string
+  cest: string
+}
+
 export type ProductType = 'main' | 'variant'
 
 export interface ProductBrand {
@@ -55,6 +61,7 @@ export interface Product extends ProductPrice {
   stock: number
   variants?: ProductVariant[]
   profile?: ProductProfile
+  tax: ProductTax
 }
 
 export type ProductVariant = Pick<Product, 'id' | 'name' | 'sku' | 'type' | 'active' | 'image' | 'image' | 'volume'>
